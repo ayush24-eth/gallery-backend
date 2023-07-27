@@ -13,26 +13,14 @@ const gallerySchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  isLiked:{
-    type: Boolean,
-    default: false
+  // isLiked:{
+  //   type: Boolean,
+  //   default: false
+  // },
+  comments: {
+    type: [String],
+    default: []
   },
-  comments: [
-    {
-      user: {
-        type: String,
-        required: true
-      },
-      comment: {
-        type: String,
-        required: true
-      },
-      timestamp: {
-        type: Date,
-        default: Date.now
-      }
-    }
-  ],
   tags: {
     type: [String],
     default: []
